@@ -14,7 +14,7 @@ router.post('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   try {
     const id = req.params.id
-    const singleDog = dogs.filter((dog) => doge.id === +id)[0]
+    const singleDog = dogs.filter((dog) => dog.id === +id)[0]
     res.send(singleDog)
   } catch (error) {
     next(error)
