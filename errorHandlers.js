@@ -18,7 +18,7 @@
 
 //* Custom error handler
 // app.use((error, req, res, next) => {
-//   res.send({ sucess: 'nope', message: error.message })
+//   res.send({ sucess: false, message: error.message })
 // })
 
 //* Not technically error handling, but a 'catch all' route
