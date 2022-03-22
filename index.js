@@ -17,19 +17,16 @@ app.use((req, res, next) => {
 })
 
 //* this will crash our server because it is a sync
-// app.get('/', (req, res, next) => {
-//   setTimeout(() => {
-//     console.log('Async code example.')
-//     throw new Error('Hello Error!')
-//   }, 1000)
-// })
+app.get('/', async (req, res, next) => {
+  try {
+    const response = await fetch('/wereerelkjlj')
+    res.send(response)
+  } catch (error) {
+    next(error)
+  }
+})
 
 app.use('/dogs', require('./routes/dogs'))
-
-app.get('/error', (req, res, next) => {
-  const err = new Error('Ooops')
-  next(err)
-})
 
 app.use((error, req, res, next) => {
   res.send({ status: 'nope', message: error.message })
