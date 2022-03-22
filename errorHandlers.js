@@ -21,7 +21,7 @@
 //   res.send({ sucess: 'nope', message: error.message })
 // })
 
-//* Not technically error handling, but a 'catch all' routes
+//* Not technically error handling, but a 'catch all' route
 // app.get('*', (req, res, next) => {
 //   res.status(404).send("Sorry, we couldn't find that route!!")
 // })
