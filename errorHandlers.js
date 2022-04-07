@@ -8,7 +8,7 @@
 //   next()
 // })
 
-//* this will crash our server because it is a sync
+//* this will crash our server because it is asynchronus 
 // app.get('/', (req, res, next) => {
 //   setTimeout(() => {
 //     console.log('Async code example.')
